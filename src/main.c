@@ -14,6 +14,10 @@ void __function_init(Handler_Class* Handler, const char* filename){
   strcpy(Handler->FileRead.filename, filename);
   Handler->FileRead.file_buffer = NULL;
   Handler->FileRead.file_read = file_read;
+
+  Handler->String.append = string_append;
+  Handler->String.print = string_print;
+  Handler->String.size = 0;
 }
 
 void Error_Handling(char* msg){
