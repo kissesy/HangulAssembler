@@ -12,7 +12,7 @@
 
 typedef struct _String_Class{
   unsigned int size;
-  unsgiend char* buffer;
+  unsigned char* buffer;
   void (*append)(struct _String_Class* self, unsigned char hexbyte);
   void (*print)(struct _String_Class* self);
 }String_Class;
