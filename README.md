@@ -13,7 +13,7 @@ Hangul Assembler
 
 ## 3. Update Status
 
-###### [2019.12.4] make new reposigoty add commit README
+###### [2019.12.4] make new reposigoty add commit file process
 
 ## 4. Contact
 
