@@ -1,23 +1,43 @@
 #ifndef __H_OPCODE_STRUCT_
 #define __H_OPCODE_STRUCT_
 
-#include "Assmbler.h"
-
+#include "Assembler.h"
+/*
+typedef struct _Function_List{
+  void (*fp_rm8_r8)(Handler_Class* self, unsigned char opcode);
+  void (*fp_rm16rm32_r16r32)(Handler_Class* self, unsigned char opcode);
+  void (*fp_r8_rm8)(Handler_Class* self, unsigned char opcode);
+  void (*fp_r16r32_rm16rm32)(Handler_Class* self, unsigned char opcode);
+  void (*fp_al_imm16imm32)(Handler_Class* self, unsigned char opcode);
+  void (*fp_eax_imm16imm32)(Handler_Class* self, unsigned char opcode);
+  void (*fp_es)(Handler_Class* self, unsigned char opcode);
+}Function_List;
+*/
+/*
 typedef struct _ADD{
-  /*function pointer list*/
-  void (*Pointer_rm8_r8)(Handler_Class* self);
+  void (*fp_rm8_r8)(Handler_Class* self, unsigned char opcode);
+  void (*fp_rm16rm32_r16r32)(Handler_Class* self, unsigned char opcode);
+  void (*fp_r8_rm8)(Handler_Class* self, unsigned char opcode);
+  void (*fp_r16r32_rm16rm32)(Handler_Class* self, unsigned char opcode);
+  void (*fp_al_imm16imm32)(Handler_Class* self, unsigned char opcode);
+  void (*fp_eax_imm16imm32)(Handler_Class* self, unsigned char opcode);
 }ADD;
 
 typedef struct _PUSH{
-
+  void (*fp_es)(Handler_Class* self, unsigned char opcode);
 }PUSH;
 
 typedef struct _POP{
-
+  void (*fp_es)(Handler_Class* self, unsigned char opcode);
 }POP;
 
 typedef struct _OR{
-
+  void (*fp_rm8_r8)(Handler_Class* self, unsigned char opcode);
+  void (*fp_rm16rm32_r16r32)(Handler_Class* self, unsigned char opcode);
+  void (*fp_r8_rm8)(Handler_Class* self, unsigned char opcode);
+  void (*fp_r16r32_rm16rm32)(Handler_Class* self, unsigned char opcode);
+  void (*fp_al_imm16imm32)(Handler_Class* self, unsigned char opcode);
+  void (*fp_eax_imm16imm32)(Handler_Class* self, unsigned char opcode);
 }OR;
 
 typedef struct _ADC{
@@ -32,6 +52,13 @@ typedef struct _AND{
 
 }AND;
 
+typedef struct _Opcode_List{
+  ADD Add;
+  PUSH Push;
+  POP Pop;
+  OR Or;
+}Opcode_List;
+*/
 /*
 여기서 문제 해당 명령어의 opcode가 같을 수 도 있고 다를 수 도 있는데 어떻게 나눌 것인가
 같은것끼리 묶을까 명령어끼리 묶을까 - 명령어끼리 묶고 opcode를 다르게 나타내기 위한 꼼수를 쓰자
